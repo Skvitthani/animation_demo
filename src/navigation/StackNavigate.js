@@ -2,6 +2,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
 import GalleryViewAnimation from '../screens/GalleryViewAnimation';
+import AnimatedListScreen from '../screens/AnimatedListScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -9,6 +10,7 @@ const StackNavigate = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="AmnimatedList" component={AnimatedListScreen} />
         <Stack.Screen name="Gallery" component={GalleryViewAnimation} />
       </Stack.Navigator>
     </NavigationContainer>
