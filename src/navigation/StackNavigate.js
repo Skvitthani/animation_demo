@@ -4,6 +4,7 @@ import React from 'react';
 import GalleryViewAnimation from '../screens/GalleryViewAnimation';
 import AnimatedListScreen from '../screens/AnimatedListScreen';
 import AnimatedCarousel from '../screens/AnimatedCarousel';
+import ThreeDCarousel from '../screens/ThreeDCarousel';
 
 const Stack = createNativeStackNavigator();
 
@@ -11,6 +12,7 @@ const StackNavigate = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="ThreeDCarousel" component={ThreeDCarousel} />
         <Stack.Screen name="Carousel" component={AnimatedCarousel} />
         <Stack.Screen name="AmnimatedList" component={AnimatedListScreen} />
         <Stack.Screen name="Gallery" component={GalleryViewAnimation} />

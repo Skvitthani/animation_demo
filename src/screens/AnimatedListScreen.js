@@ -1,13 +1,13 @@
-import {getFackerData} from '../services/GetFackerData';
-import React, {useEffect, useRef, useState} from 'react';
 import {
-  Animated,
-  Image,
-  SafeAreaView,
-  StyleSheet,
   Text,
   View,
+  Image,
+  Animated,
+  StyleSheet,
+  SafeAreaView,
 } from 'react-native';
+import {getFackerData} from '../services/GetFackerData';
+import React, {useEffect, useRef, useState} from 'react';
 
 const SPACING = 20;
 const IMAGE_HEIGHT = 60;

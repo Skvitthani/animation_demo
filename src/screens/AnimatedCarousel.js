@@ -1,12 +1,10 @@
 import {
-  Animated,
-  Dimensions,
-  FlatList,
-  Image,
-  StatusBar,
-  StyleSheet,
-  Text,
   View,
+  Image,
+  Animated,
+  StatusBar,
+  Dimensions,
+  StyleSheet,
 } from 'react-native';
 import React, {useEffect, useRef, useState} from 'react';
 import {getData} from '../services/Api';
@@ -23,7 +21,6 @@ const AnimatedCarousel = () => {
     (async () => {
       if (images?.length == 0) {
         const response = await getData();
-        console.log('response', response);
         setImages(response);
       }
     })();
