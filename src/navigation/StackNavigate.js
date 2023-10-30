@@ -5,6 +5,7 @@ import GalleryViewAnimation from '../screens/GalleryViewAnimation';
 import AnimatedListScreen from '../screens/AnimatedListScreen';
 import AnimatedCarousel from '../screens/AnimatedCarousel';
 import ThreeDCarousel from '../screens/ThreeDCarousel';
+import CountDownScreen from '../screens/CountDownScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -12,6 +13,7 @@ const StackNavigate = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="CountDownScreen" component={CountDownScreen} />
         <Stack.Screen name="ThreeDCarousel" component={ThreeDCarousel} />
         <Stack.Screen name="Carousel" component={AnimatedCarousel} />
         <Stack.Screen name="AmnimatedList" component={AnimatedListScreen} />
