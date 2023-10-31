@@ -2,18 +2,17 @@ import {
   Text,
   View,
   Image,
-  FlatList,
+  Animated,
   StatusBar,
   Dimensions,
   StyleSheet,
   SafeAreaView,
   TouchableOpacity,
-  Animated,
 } from 'react-native';
 import {getData} from '../services/Api';
 import React, {useEffect, useRef, useState} from 'react';
 
-const {width, height} = Dimensions.get('screen');
+const {width} = Dimensions.get('screen');
 
 const IMAGE_WIDTH = width * 0.65;
 const IMAGE_HEIGHT = IMAGE_WIDTH * 0.7;
@@ -31,7 +30,6 @@ const ThreeDCarousel = () => {
     (async () => {
       if (images?.length == 0) {
         const response = await getData();
-        console.log('response', response);
         setImages(response);
       }
     })();

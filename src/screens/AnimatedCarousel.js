@@ -6,8 +6,8 @@ import {
   Dimensions,
   StyleSheet,
 } from 'react-native';
-import React, {useEffect, useRef, useState} from 'react';
 import {getData} from '../services/Api';
+import React, {useEffect, useRef, useState} from 'react';
 
 const {width, height} = Dimensions.get('screen');
 
@@ -17,6 +17,7 @@ const imageH = imageW * 1.54;
 const AnimatedCarousel = () => {
   const scrollX = useRef(new Animated.Value(0)).current;
   const [images, setImages] = useState([]);
+
   useEffect(() => {
     (async () => {
       if (images?.length == 0) {
@@ -25,6 +26,7 @@ const AnimatedCarousel = () => {
       }
     })();
   }, []);
+
   return (
     <View style={styles.container}>
       <StatusBar hidden />

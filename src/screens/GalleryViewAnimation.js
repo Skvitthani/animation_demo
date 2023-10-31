@@ -35,13 +35,6 @@ const GalleryViewAnimation = () => {
       animation: true,
     });
     bottomRef.current.scrollToIndex({index, animated: true});
-
-    // if (index * (80 + 10) - 80 / 2 > width / 2) {
-    // bottomRef?.current?.scrollToOffset({
-    //   offset: index * (80 + 10) - width / 2 + 80 / 2,
-    //   animation: true,
-    // });
-    // }
   };
 
   return (

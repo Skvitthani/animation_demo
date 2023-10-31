@@ -1,13 +1,11 @@
 import {
-  Animated,
-  Dimensions,
-  FlatList,
-  StatusBar,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
   View,
+  Animated,
+  StatusBar,
+  TextInput,
+  Dimensions,
+  StyleSheet,
+  TouchableOpacity,
 } from 'react-native';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
@@ -17,8 +15,8 @@ const timers = [...Array(13).keys()].map(i => (i === 0 ? 1 : i * 5));
 
 const CountDownScreen = () => {
   const scrollX = useRef(new Animated.Value(0)).current;
-  const timeranimation = useRef(new Animated.Value(height)).current;
   const buttonAnimation = useRef(new Animated.Value(0)).current;
+  const timeranimation = useRef(new Animated.Value(height)).current;
   const textInputanimation = useRef(new Animated.Value(timers[0])).current;
   const textInputref = useRef();
 
@@ -83,8 +81,6 @@ const CountDownScreen = () => {
     inputRange: [0, 1],
     outputRange: [0, 1],
   });
-
-  console.log('duration?.toString()', duration?.toString());
 
   return (
     <View style={styles.container}>
