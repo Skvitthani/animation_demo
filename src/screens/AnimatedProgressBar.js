@@ -1,5 +1,5 @@
-import {Animated, StatusBar, StyleSheet, Text, View} from 'react-native';
 import React, {useEffect, useRef, useState} from 'react';
+import {Animated, StatusBar, StyleSheet, Text, View} from 'react-native';
 
 const Progress = ({step, steps, height}) => {
   const AnimatedValue = useRef(new Animated.Value(-1000)).current;
@@ -59,7 +59,6 @@ const Progress = ({step, steps, height}) => {
 
 const AnimatedProgressBar = () => {
   const [index, setIndex] = useState(0);
-  console.log('index', index);
 
   useEffect(() => {
     const interval = setInterval(() => {

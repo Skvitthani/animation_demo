@@ -9,6 +9,7 @@ import CountDownScreen from '../screens/CountDownScreen';
 import ParallaxCarousel from '../screens/ParallaxCarousel';
 import AnimatedFlatList from '../screens/AnimatedFlatList';
 import AnimatedProgressBar from '../screens/AnimatedProgressBar';
+import AnimatedTabs from '../screens/AnimatedTabs';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,7 +18,8 @@ const StackNavigate = () => {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{headerShown: false}}
-        initialRouteName="AnimatedProgressBar">
+        initialRouteName="AnimatedTabs">
+        <Stack.Screen name="AnimatedTabs" component={AnimatedTabs} />
         <Stack.Screen
           name="AnimatedProgressBar"
           component={AnimatedProgressBar}
