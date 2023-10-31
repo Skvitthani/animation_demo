@@ -7,6 +7,7 @@ import AnimatedCarousel from '../screens/AnimatedCarousel';
 import ThreeDCarousel from '../screens/ThreeDCarousel';
 import CountDownScreen from '../screens/CountDownScreen';
 import ParallaxCarousel from '../screens/ParallaxCarousel';
+import AnimatedFlatList from '../screens/AnimatedFlatList';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,7 +16,8 @@ const StackNavigate = () => {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{headerShown: false}}
-        initialRouteName="ParallaxCarousel">
+        initialRouteName="AnimatedFlatList">
+        <Stack.Screen name="AnimatedFlatList" component={AnimatedFlatList} />
         <Stack.Screen name="ParallaxCarousel" component={ParallaxCarousel} />
         <Stack.Screen name="CountDownScreen" component={CountDownScreen} />
         <Stack.Screen name="ThreeDCarousel" component={ThreeDCarousel} />
